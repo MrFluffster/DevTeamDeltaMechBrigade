@@ -9,12 +9,12 @@ public class Movement : MonoBehaviour
 
     private Vector2 moveDirection;
 
-    // Update is called once per frame
+    // We Process Inputs here
     void Update()
     {
         ProcessInputs();
     }
-
+    // We move player character here
     private void FixedUpdate()
     {
         Move();
