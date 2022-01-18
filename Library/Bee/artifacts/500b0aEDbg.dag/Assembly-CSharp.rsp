@@ -329,7 +329,9 @@
 -r:"Library/Bee/artifacts/500b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aEDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/Bullet.cs"
 "Assets/Scripts/Movement.cs"
+"Assets/Scripts/Shooting.cs"
 -langversion:9.0
 
 /deterministic
