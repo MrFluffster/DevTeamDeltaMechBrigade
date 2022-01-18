@@ -17,17 +17,24 @@ public class Movement : MonoBehaviour
     //How long are the iFrames gonna last
     public float invFrames;
 
+    //Quality of life     To be Deleted
+    private bool Ded = false;
     //If this is false we're not dashing
     public bool dash;
     //Are we taking damage
     public bool HP = true;
+    //how much health we have
+    public float health;
 
     private Vector2 moveDirection;
     private Vector2 mousePos;
 
-    // We Process Inputs here
+    //Update goes every frame
     void Update()
     {
+        //We check if dude died here
+        life();
+        //We check if his buttons are pressed here
         ProcessInputs();
     }
     // We move and rotate player character here
@@ -101,5 +108,19 @@ public class Movement : MonoBehaviour
         HP = false;
         yield return new WaitForSeconds(invFrames);
         HP = true;
+    }
+
+    void life()
+    {
+        if(health == 0)
+        {
+            Ded = true;
+        }
+
+        if(Ded)
+        {
+            Debug.Log("Ded");
+            Ded = false;
+        }
     }
 }
