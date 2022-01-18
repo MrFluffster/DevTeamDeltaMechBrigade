@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    //What we collide with while dashing
+    [SerializeField] LayerMask dashInclude;
+
     public Rigidbody2D rb;
     public Camera cam;
 
@@ -11,6 +14,8 @@ public class Movement : MonoBehaviour
     public float moveSpeed;
     //To keep it simple this is how far we're dashing
     public float dashRange;
+    //How long are the iFrames gonna last
+    public float invFrames;
 
     //If this is false we're not dashing
     public bool dash;
@@ -45,7 +50,10 @@ public class Movement : MonoBehaviour
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         //We dashin here
-        dash = Input.GetKey(KeyCode.Space);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            dash = true;
+        }
     }
 
     void Move()
@@ -64,16 +72,34 @@ public class Movement : MonoBehaviour
     {
         if (dash)
         {
+            // bool for turning on and off our dmg counting
             HP = false;
-            rb.MovePosition(rb.position + moveDirection * dashRange * Time.deltaTime);
+
+            //Where we're ending up
+            Vector2 dashPosition = rb.position + moveDirection * dashRange *Time.deltaTime;
+
+            //Raycast to see if we're hiting any walls and a way to stop us from getting through walls
+            RaycastHit2D colDetection = Physics2D.Raycast(rb.position, moveDirection, dashRange, dashInclude);
+            if (colDetection.collider != null)
+            {
+                dashPosition = colDetection.point;
+            }
+
+            //We move our character
+            rb.MovePosition(dashPosition);
+
+            //Coroutine to actually time the iFrames
             StartCoroutine(iFrames());
+
+            //Enabling dash again since we can only dash when this changes to true
+            dash = false;
         }
     }
 
     IEnumerator iFrames()
     {
         HP = false;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(invFrames);
         HP = true;
     }
 }

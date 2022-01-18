@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 3587236}
   - component: {fileID: 3587235}
   - component: {fileID: 3587234}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Target Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,8 +229,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3587233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07, y: 4.88, z: 0}
-  m_LocalScale: {x: 14.7286, y: 1, z: 1}
+  m_LocalPosition: {x: 0.07, y: 7.2158, z: 0}
+  m_LocalScale: {x: 14.7286, y: 5.6715455, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -269,11 +269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817af36ead90ed846aee9f0be99866b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashInclude:
+    serializedVersion: 2
+    m_Bits: 0
   rb: {fileID: 516710337}
   cam: {fileID: 519420031}
   moveSpeed: 5
-  dashRange: 2
+  dashRange: 150
+  invFrames: 0.4
   dash: 0
+  HP: 1
 --- !u!50 &516710337
 Rigidbody2D:
   serializedVersion: 4
