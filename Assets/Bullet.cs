@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
     public int damage;
-    public flat effect_time = 2.5f;
+    public float effect_time = 2.5f;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
