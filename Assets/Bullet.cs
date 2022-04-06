@@ -13,6 +13,10 @@ public class Bullet : MonoBehaviour
         Destroy(effect, effect_time);
         Destroy(gameObject);
 
-        collision.gameObject.GetComponent<Enemy_Behavior>().HP -= damage;
+
+        if (collision.gameObject.layer == 7)
+        {
+            collision.gameObject.GetComponent<Enemy_Behavior>().HP -= damage;
+        }
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1352503692824374183}
   - component: {fileID: 1352503692824374187}
   - component: {fileID: 1352503692824374184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48669a782445f9b41bb5a7ffc0c5885f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 5958127489851306038, guid: 4dd6913479c85cf4a895d9aad484e1fd, type: 3}
   moveSpeed: 2
   HP: 1
   damage: 1
