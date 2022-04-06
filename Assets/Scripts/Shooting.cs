@@ -22,7 +22,13 @@ public class Shooting : MonoBehaviour
     public float bulletForce = 20f;
 
     private Vector2 pelletForce;
+    private Animator myAnimator;
 
+
+    private void Start()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
     private void Awake()
     {
         if (shotgun)
@@ -82,5 +88,6 @@ public class Shooting : MonoBehaviour
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         }
+        myAnimator.SetTrigger("Shoot");
     }
 }
