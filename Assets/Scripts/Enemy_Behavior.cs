@@ -64,7 +64,7 @@ public class Enemy_Behavior : MonoBehaviour
 
     private void death()
     {
-        if(HP == 0)
+        if(HP <= 0)
         {
             Destroy(gameObject);
         }

@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.layer == 7)
         {
             collision.gameObject.GetComponent<Enemy_Behavior>().HP -= damage;
+            Debug.Log("Ping");
         }
     }
 }

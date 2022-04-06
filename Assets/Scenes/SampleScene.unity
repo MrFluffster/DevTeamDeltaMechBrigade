@@ -550,6 +550,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5958127488172478818, guid: 4dd6913479c85cf4a895d9aad484e1fd,
+        type: 3}
+      propertyPath: delay
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958127488678516094, guid: 4dd6913479c85cf4a895d9aad484e1fd,
+        type: 3}
+      propertyPath: delay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958127489758665967, guid: 4dd6913479c85cf4a895d9aad484e1fd,
+        type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958127489758665967, guid: 4dd6913479c85cf4a895d9aad484e1fd,
+        type: 3}
+      propertyPath: limit
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958127489758665967, guid: 4dd6913479c85cf4a895d9aad484e1fd,
+        type: 3}
+      propertyPath: spread
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958127489758665967, guid: 4dd6913479c85cf4a895d9aad484e1fd,
+        type: 3}
+      propertyPath: bullets
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958127489758665967, guid: 4dd6913479c85cf4a895d9aad484e1fd,
+        type: 3}
+      propertyPath: shotgun
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5958127489758665967, guid: 4dd6913479c85cf4a895d9aad484e1fd,
+        type: 3}
+      propertyPath: bulletForce
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5958127489851306034, guid: 4dd6913479c85cf4a895d9aad484e1fd,
         type: 3}
       propertyPath: cam
