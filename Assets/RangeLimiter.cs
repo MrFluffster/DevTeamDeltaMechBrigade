@@ -6,7 +6,7 @@ public class RangeLimiter : MonoBehaviour
 {
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 8)
+        if(collision.gameObject.layer == 8)
         {
             Destroy(collision.gameObject);
         }
