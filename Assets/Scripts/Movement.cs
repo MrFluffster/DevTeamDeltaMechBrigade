@@ -119,6 +119,7 @@ public class Movement : MonoBehaviour
 
         if(Ded)
         {
+            Destroy(gameObject);
             Debug.Log("Ded");
             Ded = false;
         }

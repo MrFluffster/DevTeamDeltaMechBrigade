@@ -64,7 +64,7 @@ public class Enemy_Behavior : MonoBehaviour
 
     private void death()
     {
-        if(HP == 0)
+        if(HP <= 0)
         {
             Destroy(gameObject);
         }
@@ -76,7 +76,7 @@ public class Enemy_Behavior : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             health = collision.gameObject.GetComponent<Movement>().HP;
-            Debug.Log("Boop");
+            Debug.Log("-1 Health");
         }
     }
 }
